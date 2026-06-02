@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0"><title>About - BelajarKoding</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--p:#2c6e9e;--pl:#d4e6ff;--s:#1e4a76;--t:#0a2b3e;--tl:#1c5279;--bg:#fff;--ba:#eaf3ff;--bd:#cfe2ff;--fs:"Segoe UI","Tahoma","Geneva","Verdana",sans-serif;--r:0px;--sh:8px 8px 0px rgba(33,85,119,0.2)}
+@media(prefers-color-scheme:dark){:root{--p:#4a9bd5;--pl:#1e3a5f;--t:#e2e8f0;--tl:#94a3b8;--bg:#0f172a;--ba:#1e293b;--bd:#334155;--sh:8px 8px 0px rgba(0,0,0,0.4)}}
+html{scroll-behavior:smooth}
+body{font-family:var(--fs);font-size:16px;line-height:1.7;color:var(--t);background:#f5f7fe}
+.wrap{max-width:800px;margin:0 auto;padding:2rem 1.5rem;background:#fff;border:1px solid var(--bd);box-shadow:12px 12px 0px rgba(13,53,80,0.08);padding:2rem;margin-top:1rem;margin-bottom:1rem}
+h1{font-size:2.25rem;font-weight:800;color:#17466b;margin-bottom:0.25rem;border-left:8px solid var(--p);padding-left:1rem}
+h1 small{font-size:1rem;font-weight:400;color:var(--tl)}
+.tagline{font-size:1.05rem;color:var(--tl);margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:3px solid var(--p);padding-top:0.5rem}
+.tagline span{display:inline;font-size:1.05rem}
+h2{font-size:1.4rem;font-weight:700;color:#17466b;margin:2.5rem 0 1rem;padding-bottom:0.4rem;border-bottom:2px solid var(--bd)}
+h3{font-size:1.15rem;font-weight:600;color:var(--p);margin:1.5rem 0 0.75rem}
+h4{font-size:1rem;font-weight:600;color:var(--t);margin:1rem 0 0.5rem}
+p{margin-bottom:0.75rem;color:var(--t);line-height:1.8}
+a{color:var(--p);font-weight:600;text-decoration:none}
+a:hover{text-decoration:underline}
+ul,ol{margin:0.5rem 0 1rem 1.5rem}
+li{margin-bottom:0.4rem;color:var(--t);line-height:1.7}
+li strong{color:var(--p)}
+hr{border:none;border-top:2px solid var(--bd);margin:2rem 0}
+blockquote{border-left:4px solid var(--p);padding:0.75rem 1.25rem;margin:1.25rem 0;background:var(--pl);color:var(--t);font-style:italic;box-shadow:4px 4px 0px rgba(13,53,80,0.12)}
+blockquote p:last-child{margin-bottom:0}
+.card{border:1px solid var(--bd);padding:1.25rem;margin-bottom:1.25rem;background:#eaf3ff;transition:all 0.2s;box-shadow:6px 6px 0px rgba(33,85,119,0.15)}
+.card:hover{transform:translate(-3px,-3px);box-shadow:10px 10px 0px rgba(33,85,119,0.25);border-color:var(--p)}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin:1rem 0}
+.page-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.25rem;margin:1rem 0}
+.page-card{background:#eaf3ff;border:3px solid #1e4a76;padding:1rem 1.25rem;transition:all 0.2s;box-shadow:8px 8px 0px rgba(13,53,80,0.25)}
+.page-card:hover{transform:translate(-3px,-3px);box-shadow:12px 12px 0px rgba(13,53,80,0.35);border-color:var(--p)}
+.page-card:nth-child(odd){background:#d4e6ff}
+.page-card:nth-child(even){background:#c0dcff}
+.page-card h4{margin-bottom:0.5rem;font-size:1rem}
+.page-card p{font-size:0.9rem;color:var(--tl);margin-bottom:0}
+.page-card ul{margin:0.5rem 0 0;font-size:0.85rem}
+.page-card li{margin-bottom:0.2rem;color:var(--tl)}
+.tag{display:inline-block;background:#1e5c85;color:white;font-size:0.7rem;font-weight:700;padding:0.2rem 0.6rem;text-transform:uppercase;letter-spacing:0.03em;box-shadow:3px 3px 0px #0d3550}
+.emoji{font-size:1.5rem;line-height:1}
+.social-links{display:flex;gap:1rem;flex-wrap:wrap;margin:0.75rem 0}
+.social-links a{display:flex;align-items:center;gap:0.4rem;padding:0.5rem 1rem;border-radius:0;font-size:0.9rem;font-weight:600;transition:all 0.2s;border:1px solid transparent}
+.social-links a.ig{background:#fce4ec;color:#e91e63;border-color:#f8bbd0}
+.social-links a.ig:hover{background:#e91e63;color:white;border-color:#e91e63}
+.social-links a.gh{background:#e8eaf6;color:#283593;border-color:#c5cae9}
+.social-links a.gh:hover{background:#283593;color:white;border-color:#283593}
+@media(prefers-color-scheme:dark){
+.social-links a.ig{background:rgba(233,30,99,0.15);color:#f48fb1;border-color:rgba(233,30,99,0.3)}
+.social-links a.ig:hover{background:#e91e63;color:white}
+.social-links a.gh{background:rgba(40,53,147,0.15);color:#9fa8da;border-color:rgba(40,53,147,0.3)}
+.social-links a.gh:hover{background:#283593;color:white}
+}
+.footer-box{background:#cde1f5;border:2px solid #8ab4d6;padding:1.5rem;margin-top:2rem;text-align:center;box-shadow:6px 6px 0px rgba(13,53,80,0.15)}
+.footer-box .emoji{font-size:2rem;display:block;margin-bottom:0.5rem}
+@media(max-width:768px){
+.wrap{padding:1.25rem 1rem}
+h1{font-size:1.75rem}
+.page-grid{grid-template-columns:1fr}
+.card-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>About Platform <small>BelajarKoding</small></h1>
+<p class="tagline">Platform belajar basic coding untuk para <strong>Vibes Codingers</strong> yang biasanya modal copas AI, ganti warna dikit terus merasa udah jadi programmer elite &#x1F5FF;</p>
+
+<p>Daripada pas ditanya:<br>
+<em>"itu flexbox kenapa bisa center?"</em><br>
+malah bengong melihat masa depan...</p>
+
+<p>mending cari tau dulu fundamentalnya..</p>
+
+<p>Website ini fokus membahas dasar dasar frontend development seperti HTML & CSS dengan cara yang lebih santai, visual, dan mudah dipahami pemula. Cocok untuk orang yang baru masuk dunia coding, suka desain web aesthetic, atau ingin mulai ngerti isi kode yang biasanya cuma dicopas dari AI, YouTube, atau GitHub.</p>
+
+<p>Belajar di sini tidak cuma teori, tapi juga langsung melihat preview hasil coding agar lebih gampang memahami cara kerja setiap elemen.</p>
+
+<hr>
+
+<h2>Tujuan</h2>
+
+<p>Tujuan website ini dibuat adalah untuk membantu pemula memahami fundamental coding web sebelum terlalu jauh bergantung pada AI atau template instan.</p>
+
+<p>Karena vibes coding memang seru...<br>
+tapi lebih seru lagi kalau ngerti apa yang sebenarnya terjadi di balik layar monitor..</p>
+
+<p>Platform ini dibuat agar:</p>
+
+<ul>
+<li>pemula bisa belajar coding secara bertahap</li>
+<li>memahami struktur HTML & styling CSS</li>
+<li>bisa membuat website sendiri dari nol</li>
+<li>tidak hanya menjadi <em>"copy paste engineer"</em></li>
+<li>membangun mindset frontend developer yang lebih paham logika tampilan web</li>
+</ul>
+
+<hr>
+
+<h2>Target</h2>
+
+<p>Website ini ditujukan untuk:</p>
+
+<div class="card-grid">
+<div class="card">
+<div class="tag">Vibes</div>
+<p style="margin-top:0.5rem">Player Vibes Coding baru yang lagi cari arah</p>
+</div>
+<div class="card">
+<div class="tag">Pemula</div>
+<p style="margin-top:0.5rem">Pemula yang ingin belajar frontend development dari dasar</p>
+</div>
+<div class="card">
+<div class="tag">Design</div>
+<p style="margin-top:0.5rem">Orang yang suka UI aesthetic dan web design</p>
+</div>
+<div class="card">
+<div class="tag">Pelajar</div>
+<p style="margin-top:0.5rem">Pelajar atau mahasiswa yang baru masuk dunia coding</p>
+</div>
+<div class="card">
+<div class="tag">Fundamental</div>
+<p style="margin-top:0.5rem">Orang yang ingin ngerti fundamental HTML + CSS</p>
+</div>
+<div class="card">
+<div class="tag">Lofi</div>
+<p style="margin-top:0.5rem">Orang yang biasanya coding ditemani kopi, playlist lofi, dan existential crisis kecil jam 1 malam &#x2615;</p>
+</div>
+</div>
+
+<hr>
+
+<h2>Materi Yang Dipelajari</h2>
+
+<div class="page-grid">
+
+<div class="page-card">
+<h4>&#x1F4DA; Page "Panduan Lengkap"</h4>
+<p>Berisi roadmap dan panduan lengkap belajar HTML + CSS dari dasar hingga memahami struktur pembuatan website modern secara bertahap.</p>
+<p style="margin-top:0.5rem"><strong>Isi pembelajaran:</strong></p>
+<ul>
+<li>pengenalan web development</li>
+<li>struktur HTML</li>
+<li>dasar CSS</li>
+<li>layout website</li>
+<li>responsive design</li>
+<li>mini challenge</li>
+<li>roadmap belajar frontend</li>
+</ul>
+</div>
+
+<div class="page-card">
+<h4>&#x1F4D6; Page "Belajar HTML"</h4>
+<p>Berisi pembelajaran dasar HTML lengkap beserta preview hasil secara langsung agar pengguna bisa melihat bentuk output dari setiap tag yang dipelajari.</p>
+<p style="margin-top:0.5rem"><strong>Isi pembelajaran:</strong></p>
+<ul>
+<li>heading</li>
+<li>paragraph</li>
+<li>image</li>
+<li>link</li>
+<li>list</li>
+<li>table</li>
+<li>form</li>
+<li>semantic HTML</li>
+<li>struktur halaman web</li>
+</ul>
+<p style="margin-top:0.5rem">Disertai preview visual hasil HTML secara realtime.</p>
+</div>
+
+<div class="page-card">
+<h4>&#x1F3A8; Page "Belajar CSS"</h4>
+<p>Berisi pembelajaran dasar CSS beserta preview styling agar pengguna memahami cara mempercantik tampilan website.</p>
+<p style="margin-top:0.5rem"><strong>Isi pembelajaran:</strong></p>
+<ul>
+<li>color</li>
+<li>background</li>
+<li>margin & padding</li>
+<li>border</li>
+<li>flexbox</li>
+<li>grid</li>
+<li>animation</li>
+<li>hover effect</li>
+<li>responsive layout</li>
+</ul>
+<p style="margin-top:0.5rem">Disertai preview perubahan desain secara langsung.</p>
+</div>
+
+<div class="page-card">
+<h4>&#x1F680; Page "Proyek"</h4>
+<p>Berisi pembelajaran membuat full project HTML + CSS dari awal hingga menjadi tampilan website utuh.</p>
+<p style="margin-top:0.5rem"><strong>Isi pembelajaran:</strong></p>
+<ul>
+<li>membuat landing page</li>
+<li>membuat navbar</li>
+<li>hero section</li>
+<li>card UI</li>
+<li>footer</li>
+<li>responsive website</li>
+<li>modern UI layout</li>
+</ul>
+<p style="margin-top:0.5rem">Disertai preview project dan source code yang dapat dipelajari langsung.</p>
+</div>
+
+</div>
+
+<hr>
+
+<h2>Tentang</h2>
+
+<h3>Nama</h3>
+<p>Oct Ganz</p>
+
+<h3>Passion</h3>
+<p>Vibes Codingers gabhut</p>
+
+<h3>Alasan Membuat Website</h3>
+<blockquote><p>guabhutt &#x1F5FF;</p></blockquote>
+<p>tapi sekalian pengen bikin tempat belajar coding yang lebih santai, ga terlalu formal, dan lebih gampang dipahami pemula.</p>
+
+<h3>Social Media</h3>
+<div class="social-links">
+<a href="https://instagram.com/octa_whdni" target="_blank" rel="noopener" class="ig">&#x1F4F8; IG : octa_whdni</a>
+<a href="mailto:shusensei27@gmail.com" class="gh">&#x1F4E7; GitHub : shusensei27</a>
+</div>
+
+<div class="footer-box">
+<div class="emoji">&#x1F916;</div>
+<p style="margin-bottom:0"><strong>Vibes Codingers gabhut</strong><br>
+<span style="color:var(--tl);font-size:0.9rem">Belajar dikit gapapa, yang penting niat. Santuy wae.</span></p>
+</div>
+
+</div>
+</body>
+</html>

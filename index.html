@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Belajar HTML & CSS - Portal Lengkap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--p:#2c6e9e;--pl:#d4e6ff;--t:#0a2b3e;--tl:#1c5279;--bg:#fff;--ba:#eaf3ff;--bd:#cfe2ff}
+@media(prefers-color-scheme:dark){:root{--p:#4a9bd5;--pl:#1e3a5f;--t:#e2e8f0;--tl:#94a3b8;--bg:#0f172a;--ba:#1e293b;--bd:#334155}}
+html,body{height:100%}
+body{font-family:'Segoe UI','Tahoma','Geneva','Verdana',sans-serif;font-size:16px;color:var(--t);background:#f5f7fe;display:flex;flex-direction:column}
+.app-nav{flex-shrink:0;position:sticky;top:0;z-index:9999;background:#fff;border-bottom:2px solid #c7dcff;box-shadow:0 4px 12px rgba(0,0,0,0.05)}
+.app-nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:0 1rem}
+.app-nav-title{font-size:1rem;font-weight:800;color:#1e4a76;margin-right:1.5rem;white-space:nowrap;flex-shrink:0}
+.app-nav-tabs{display:flex;gap:0;overflow-x:auto;flex:1}
+.app-nav-tab{padding:0.75rem 1rem;font-size:0.875rem;font-weight:600;color:#1c5279;cursor:pointer;border:none;background:none;font-family:'Segoe UI','Tahoma','Geneva','Verdana',sans-serif;white-space:nowrap;border-bottom:3px solid transparent;transition:all 0.2s}
+.app-nav-tab:hover{color:#1e4a76;background:var(--ba)}
+.app-nav-tab.active{color:#1e4a76;border-bottom-color:#2c6e9e;background:var(--pl)}
+.app-pages{flex:1;display:flex;position:relative;overflow:hidden}
+.app-page{position:absolute;inset:0;display:none}
+.app-page.active{display:block}
+.app-page iframe{width:100%;height:100%;border:none}
+@media(max-width:768px){.app-nav-title{font-size:0.85rem;margin-right:0.75rem}.app-nav-tab{padding:0.6rem 0.65rem;font-size:0.8rem}}
+</style>
+</head>
+<body>
+<nav class="app-nav">
+<div class="app-nav-inner">
+<div class="app-nav-title">BelajarKoding</div>
+<div class="app-nav-tabs">
+<button class="app-nav-tab active" data-file="panduan_lengkap.html">Panduan Lengkap</button>
+<button class="app-nav-tab" data-file="belajar_01_html_lengkap.html">Belajar HTML</button>
+<button class="app-nav-tab" data-file="belajar_02_css_lengkap.html">Belajar CSS</button>
+<button class="app-nav-tab" data-file="belajar_03_proyek_lengkap.html">Proyek</button>
+<button class="app-nav-tab" data-file="about.html">About</button>
+</div>
+</div>
+</nav>
+<div class="app-pages" id="pages">
+<div class="app-page active" id="page-0"><iframe src="panduan_lengkap.html"></iframe></div>
+<div class="app-page" id="page-1"><iframe src="belajar_01_html_lengkap.html"></iframe></div>
+<div class="app-page" id="page-2"><iframe src="belajar_02_css_lengkap.html"></iframe></div>
+<div class="app-page" id="page-3"><iframe src="belajar_03_proyek_lengkap.html"></iframe></div>
+<div class="app-page" id="page-4"><iframe src="about.html"></iframe></div>
+</div>
+<script>
+(function(){
+var tabs=document.querySelectorAll('.app-nav-tab');
+var pages=document.querySelectorAll('.app-page');
+tabs.forEach(function(tab,idx){
+tab.addEventListener('click',function(){
+tabs.forEach(function(t){t.classList.remove('active')});
+this.classList.add('active');
+pages.forEach(function(p){p.classList.remove('active')});
+var page=document.getElementById('page-'+idx);
+if(page)page.classList.add('active');
+});
+});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Belajar #3 - Proyek Lengkap HTML + CSS</title><style>:root{--p:#2c6e9e;--pl:#d4e6ff;--s:#1e4a76;--t:#0a2b3e;--tl:#1c5279;--bg:#fff;--ba:#eaf3ff;--bdr:#cfe2ff;--bd:#cfe2ff;--fs:"Segoe UI","Tahoma","Geneva","Verdana",sans-serif;--fm:"Courier New",monospace;--r:0px;--sh:8px 8px 0px rgba(33,85,119,0.2);--bsh:0 4px 8px rgba(0,0,0,0.1)}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--fs);font-size:16px;line-height:1.7;color:var(--t);background:#f5f7fe}.wrap{max-width:1100px;margin:0 auto;padding:2rem}h1{font-size:2rem;font-weight:800;color:var(--p);margin-bottom:0.5rem}h2{font-size:1.5rem;font-weight:700;margin:2rem 0 1rem;padding-bottom:0.5rem;border-bottom:3px solid var(--p)}h3{font-size:1.2rem;font-weight:600;margin-bottom:0.5rem}h4{font-size:1.1rem;font-weight:600;color:var(--tl);margin-bottom:0.5rem}p{margin-bottom:0.75rem;color:var(--t)}code{background:var(--ba);padding:0.1em 0.3em;border-radius:3px;font-family:var(--fm);font-size:0.85em;color:#ef4444}pre{background:#1e1e2e;color:#e2e8f0;padding:1rem;border-radius:var(--r);overflow-x:auto;font-size:0.85rem;margin:0.75rem 0}pre code{background:none;color:inherit;padding:0;font-size:inherit}.demo{display:grid;grid-template-columns:auto auto;gap:1rem;margin-bottom:2rem;border:3px solid #1e4a76;border-radius:4px;overflow:visible;box-shadow:12px 12px 0px rgba(13,53,80,0.3)}.demo-code,.demo-preview{padding:1.5rem;background:#dcecfa;border:3px solid #2c6e9e;box-shadow:8px 8px 0px rgba(13,53,80,0.25);margin:0.5rem;border-radius:0}.demo-code{padding:1rem;background:#15202b;font-size:0.85rem;color:#e2e8f0;overflow-x:auto;white-space:pre;border:3px solid #1e4a76}.demo-preview{padding:1.5rem;background:#dcecfa;border:2px solid #2c6e9e;box-shadow:8px 8px 0px rgba(13,53,80,0.25);margin:0.5rem;border-radius:0}.demo-preview-inner{background:#ffffff;padding:1rem;border-radius:0;border:2px solid #b9d3f0}.note{background:var(--ba);border-left:4px solid var(--p);padding:0.75rem 1rem;margin-bottom:1.5rem;border-radius:0 var(--r) var(--r) 0;font-size:0.9rem;color:var(--tl)}.btn{display:inline-block;background:var(--p);color:white;padding:0.5rem 1.25rem;border-radius:var(--r);text-decoration:none;font-weight:600;transition:all 0.3s;border:2px solid var(--p)}.btn:hover{background:var(--pd);transform:translateY(-2px);box-shadow:var(--sh)}.btn-ghost{background:transparent;color:var(--p);border:2px solid var(--p)}.btn-ghost:hover{background:var(--p);color:white}.tag{display:inline-block;background:var(--p);color:white;font-size:0.75rem;padding:0.15rem 0.5rem;border-radius:50px;font-weight:600}.card{border:1px solid var(--bd);border-radius:var(--r);padding:1.25rem;margin-bottom:1rem;transition:all 0.3s}.card:hover{transform:translateY(-4px);box-shadow:var(--sh);border-color:var(--p)}ul,ol{margin:0.5rem 0 0.75rem 1.25rem}li{margin-bottom:0.25rem}footer{text-align:center;padding:2rem 0;border-top:1px solid var(--bd);margin-top:2rem;color:var(--tl);font-size:0.85rem}@media(max-width:768px){.wrap{padding:1rem}.demo{grid-template-columns:auto auto}h1{font-size:1.5rem}h2{font-size:1.25rem}}@media print{.demo{grid-template-columns:1fr}.btn-ghost{display:none}}
+
+
+/* Y2K Blue Sharp Theme - Layout Safe */
+body{background:#f5f7fe!important}
+h1,h2,h3,h4,h5,h6{color:#17466b}
+a{color:#2c6e9e}
+::selection{background:#2c6e9e;color:white}
+
+/* Cards & panels - Y2K sharp */
+.feature-card,.portfolio-card,.blog-card{border-radius:0;background:#eaf3ff;border:1px solid #b9d3f0;box-shadow:8px 8px 0px rgba(33,85,119,0.2)}
+.feature-card:hover,.portfolio-card:hover,.blog-card:hover{transform:translate(-3px,-3px);box-shadow:12px 12px 0px rgba(33,85,119,0.3)}
+.feature-icon{background:#d4e6ff;color:#1e4a76;border-radius:0}
+
+/* Nav */
+.site-header{border-bottom:2px solid #c7dcff!important;background:rgba(255,255,255,0.95)!important}
+.nav-link:hover,.nav-link.active{background:#d4e6ff!important}
+
+/* Hero */
+.hero-badge{background:#d4e6ff;color:#1e4a76}
+.section-dark{background:#eaf3ff!important}
+.site-footer{background:#1e4a76!important}
+.site-footer .logo{color:white!important}
+
+/* Tables */
+table th{background:#d4e6ff}
+table tr:nth-child(even){background:#eaf3ff}
+
+/* Blockquote */
+blockquote{border-left:4px solid #2c6e9e;background:#d4e6ff}
+
+/* Tags/badges */
+.tag,.portfolio-tag,.badge-blue{background:#1e5c85;color:white;box-shadow:3px 3px 0px #0d3550;border-radius:0;display:inline-block;padding:0.2rem 0.8rem}
+
+/* Form elements */
+input,select,textarea{border-radius:0!important}
+button,.btn,.btn-primary,.btn-outline,.btn-ghost,.btn-large,.copy-btn,.cpy{border-radius:500px!important}
+.copy-btn,.cpy{background:#1e4a76}
+.copy-btn:hover,.cpy:hover{background:#2c6e9e}
+
+/* Selection colors */
+mark{background:#d4e6ff;color:#0a2b3e}
+
+/* About page specific */
+.card-sharp,.page-card{border-radius:0;background:#eaf3ff;border:1px solid #b9d3f0;box-shadow:8px 8px 0px rgba(33,85,119,0.2)}
+.page-card:hover,.card-sharp:hover{transform:translate(-3px,-3px);box-shadow:12px 12px 0px rgba(33,85,119,0.3)}
+
+/* Footer */
+.footer{background:#cde1f5;border-top:3px solid #3079ab}
+
+/* Neumorphic panels */
+.neumorph-panel{background:#eef2fa;border-radius:0;padding:1.8rem;box-shadow:9px 9px 18px #cbd5e1,-9px -9px 18px #fff}
+
+/* Page card grid */
+.page-card:nth-child(odd){background:#d4e6ff}
+.page-card:nth-child(even){background:#c0dcff}
+
+/* Social */
+.social-links a.ig{background:#fce4ec;color:#e91e63}
+.social-links a.ig:hover{background:#e91e63;color:white}
+.social-links a.gh{background:#e8eaf6;color:#283593}
+.social-links a.gh:hover{background:#283593;color:white}
+
+/* Dark mode adjustments */
+@media(prefers-color-scheme:dark){
+body{background:#0f172a!important}
+.feature-card,.portfolio-card,.blog-card,.card-sharp,.page-card{background:#1e293b!important;border-color:#334155!important;box-shadow:8px 8px 0px rgba(0,0,0,0.4)!important}
+.site-header{background:rgba(15,23,42,0.95)!important}
+.section-dark{background:#1e293b!important}
+.site-footer{background:#0f172a!important}
+table th{background:#1e3a5f}
+table tr:nth-child(even){background:#1e293b}
+.neumorph-panel{background:#1e293b;box-shadow:9px 9px 18px #0a0f1a,-9px -9px 18px #2a3650}
+blockquote{background:#1e3a5f}
+.social-links a.ig{background:rgba(233,30,99,0.15);color:#f48fb1}
+.social-links a.ig:hover{background:#e91e63;color:white}
+.social-links a.gh{background:rgba(40,53,147,0.15);color:#9fa8da}
+.social-links a.gh:hover{background:#283593;color:white}
+}
+
+</style></head><body><div class="wrap"><h1>Belajar #3 Proyek Lengkap HTML + CSS</h1><p style="color:var(--tl);margin-bottom:1.5rem;font-size:1.1rem">Proyek website lengkap yang menggabungkan SEMUA elemen HTML dan properti CSS. Setiap bagian ada kode + preview + penjelasan.</p><h2>1. Layout Halaman (CSS Grid)</h2><div class="note"><b>grid-template-areas</b>: Mendefinisikan layout visual halaman. Setiap baris dalam string = 1 baris grid. Nama area = grid-area pada elemen.</div><div class="demo"><div class="demo-code">&lt;header&gt;...&lt;/header&gt;
+&lt;nav&gt;...&lt;/nav&gt;
+&lt;main&gt;...&lt;/main&gt;
+&lt;aside&gt;...&lt;/aside&gt;
+&lt;footer&gt;...&lt;/footer&gt;
+
+CSS:
+.grid-layout {
+  display: grid;
+  grid-template:
+    "hdr  hdr" auto
+    "nav  main" 1fr
+    "ftr  ftr" auto
+    / 220px 1fr;
+  gap: 0;
+  min-height: 100vh;
+}</div><div class="demo-preview"><div class="demo-preview-inner" style="padding:0;overflow:hidden;display:flex;flex-direction:column;min-height:200px"><div style="background:#2563eb;color:white;padding:0.5rem 1rem"><b>HEADER</b> - Logo + Navigasi</div><div style="display:flex;flex:1"><div style="width:80px;background:#7c3aed;color:white;padding:0.5rem;font-size:0.8rem">SIDEBAR<br>Links</div><div style="flex:1;padding:0.75rem;background:var(--bg)"><b style="color:#1e293b">MAIN CONTENT</b><p style="font-size:0.85rem;color:var(--tl)">Konten utama halaman di sini.</p></div></div><div style="background:#1e293b;color:#94a3b8;padding:0.4rem 1rem;font-size:0.85rem">FOOTER - Copyright</div></div></div></div><h2>2. Navigasi Responsif (Flexbox)</h2><div class="note"><b>Navbar dengan Flexbox</b>: justify-content:space-between untuk logo di kiri dan links di kanan. align-items:center untuk vertikal tengah. transition untuk efek hover.</div><div class="demo"><div class="demo-code">&lt;nav class="navbar"&gt;
+  &lt;a href="#" class="logo"&gt;MySite&lt;/a&gt;
+  &lt;ul class="nav-links"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+CSS:
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}</div><div class="demo-preview"><div class="demo-preview-inner" style="padding:0"><nav style="display:flex;justify-content:space-between;align-items:center;padding:0.75rem 1rem;background:var(--bg);box-shadow:0 2px 8px rgba(0,0,0,0.08);border-radius:8px"><a href="#" style="font-weight:800;font-size:1.25rem;color:var(--p);text-decoration:none">MySite</a><ul style="list-style:none;display:flex;gap:1rem;margin:0"><li><a href="#" style="color:var(--tl);text-decoration:none;font-weight:500;padding:0.25rem 0.5rem;border-radius:4px;transition:all 0.2s" onmouseover="this.style.color='#2563eb';this.style.background='#dbeafe'" onmouseout="this.style.color='#64748b';this.style.background='transparent'">Home</a></li><li><a href="#" style="color:var(--tl);text-decoration:none;font-weight:500;padding:0.25rem 0.5rem;border-radius:4px;transition:all 0.2s" onmouseover="this.style.color='#2563eb';this.style.background='#dbeafe'" onmouseout="this.style.color='#64748b';this.style.background='transparent'">About</a></li></ul></nav></div></div></div><h2>3. Hero Section (Flexbox + Gradien + Animasi)</h2><div class="note"><b>Hero</b>: display:flex + min-height untuk full height. linear-gradient untuk background. @keyframes untuk animasi. clamp() untuk font-size responsif.</div><div class="demo"><div class="demo-code">&lt;section class="hero"&gt;
+  &lt;div class="hero-content"&gt;
+    &lt;h1&gt;Belajar HTML &amp; CSS&lt;/h1&gt;
+    &lt;p&gt;Dari nol hingga mahir...&lt;/p&gt;
+    &lt;a href="#" class="btn"&gt;Mulai&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+CSS:
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 60vh;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+}</div><div class="demo-preview"><div class="demo-preview-inner" style="padding:0;background:linear-gradient(135deg,#2563eb,#7c3aed);border-radius:8px;min-height:140px;display:flex;align-items:center;justify-content:center"><div style="text-align:center;color:white;padding:1rem"><h1 style="font-size:1.5rem;font-weight:800;margin-bottom:0.5rem;color:white">Belajar HTML &amp; CSS</h1><p style="color:rgba(255,255,255,0.8);margin-bottom:1rem;font-size:0.9rem">Dari nol hingga mahir dengan panduan lengkap</p><a href="#" style="display:inline-block;background:white;color:#2563eb;padding:0.5rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:700">Mulai Belajar</a></div></div></div></div><h2>4. Cards Grid (Grid auto-fit + Hover)</h2><div class="note"><b>repeat(auto-fit, minmax(280px, 1fr))</b>: Otomatis menyesuaikan jumlah kolom. Card dengan border, border-radius, box-shadow, dan hover translateY untuk efek angkat.</div><div class="demo"><div class="demo-code">&lt;div class="card-grid"&gt;
+  &lt;div class="card"&gt;&lt;h3&gt;HTML&lt;/h3&gt;&lt;p&gt;...&lt;/p&gt;&lt;/div&gt;
+  &lt;div class="card"&gt;&lt;h3&gt;CSS&lt;/h3&gt;&lt;p&gt;...&lt;/p&gt;&lt;/div&gt;
+  &lt;div class="card"&gt;&lt;h3&gt;JS&lt;/h3&gt;&lt;p&gt;...&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+CSS:
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background:var(--bg);
+  border: 1px solid var(--bd);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+.card:hover { transform: translateY(-4px); }</div><div class="demo-preview"><div class="demo-preview-inner" style="padding:0.5rem;background:transparent"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:0.75rem"><div style="background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:1rem;transition:all 0.3s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';this.style.borderColor='#2563eb'" onmouseout="this.style.transform='none';this.style.boxShadow='none';this.style.borderColor='var(--bd)'"><div style="width:40px;height:40px;background:#dbeafe;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#2563eb;font-weight:800;margin-bottom:0.75rem">H</div><h4 style="margin-bottom:0.25rem;font-size:1rem">HTML</h4><p style="font-size:0.8rem;color:var(--tl)">Struktur &amp; elemen</p></div><div style="background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:1rem;transition:all 0.3s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';this.style.borderColor='#7c3aed'" onmouseout="this.style.transform='none';this.style.boxShadow='none';this.style.borderColor='var(--bd)'"><div style="width:40px;height:40px;background:#f3e8ff;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#7c3aed;font-weight:800;margin-bottom:0.75rem">C</div><h4 style="margin-bottom:0.25rem;font-size:1rem">CSS</h4><p style="font-size:0.8rem;color:var(--tl)">Style &amp; layout</p></div><div style="background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:1rem;transition:all 0.3s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';this.style.borderColor='#10b981'" onmouseout="this.style.transform='none';this.style.boxShadow='none';this.style.borderColor='var(--bd)'"><div style="width:40px;height:40px;background:#d1fae5;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#10b981;font-weight:800;margin-bottom:0.75rem">J</div><h4 style="margin-bottom:0.25rem;font-size:1rem">JavaScript</h4><p style="font-size:0.8rem;color:var(--tl)">Interaktivitas</p></div></div></div></div></div><h2>5. Form dengan Validasi</h2><div class="note"><b>Form</b>: type=text/email/tel/textarea/checkbox/radio. Validasi HTML5: required, pattern, minlength. Pseudo-class :user-valid/:user-invalid untuk styling.</div><div class="demo"><div class="demo-code">&lt;form&gt;
+  &lt;label&gt;Nama *&lt;/label&gt;
+  &lt;input type="text" required&gt;
+  &lt;label&gt;Email *&lt;/label&gt;
+  &lt;input type="email" required&gt;
+  &lt;label&gt;Pesan&lt;/label&gt;
+  &lt;textarea&gt;&lt;/textarea&gt;
+  &lt;button&gt;Kirim&lt;/button&gt;
+&lt;/form&gt;</div><div class="demo-preview"><div class="demo-preview-inner" style="font-size:0.9rem"><form style="display:flex;flex-direction:column;gap:0.75rem"><div><label style="display:block;font-weight:600;margin-bottom:0.25rem;font-size:0.85rem">Nama Lengkap <span style="color:#ef4444">*</span></label><input type="text" value="John Doe" style="width:100%;padding:0.4rem 0.6rem;border:1px solid var(--bd);border-radius:6px;font-size:0.85rem"></div><div><label style="display:block;font-weight:600;margin-bottom:0.25rem;font-size:0.85rem">Email <span style="color:#ef4444">*</span></label><input type="email" value="john@example.com" style="width:100%;padding:0.4rem 0.6rem;border:1px solid var(--bd);border-radius:6px;font-size:0.85rem"></div><div><label style="display:block;font-weight:600;margin-bottom:0.25rem;font-size:0.85rem">Kategori</label><select style="width:100%;padding:0.4rem 0.6rem;border:1px solid var(--bd);border-radius:6px;font-size:0.85rem"><option>Pertanyaan</option><option>Saran</option><option>Lainnya</option></select></div><div><label style="display:block;font-weight:600;margin-bottom:0.25rem;font-size:0.85rem">Pesan</label><textarea rows="2" style="width:100%;padding:0.4rem 0.6rem;border:1px solid var(--bd);border-radius:6px;font-size:0.85rem;resize:vertical"></textarea></div><div><label style="display:flex;align-items:center;gap:0.5rem;font-size:0.85rem"><input type="checkbox" checked> Saya setuju</label></div><div><label style="display:inline-flex;align-items:center;gap:0.25rem;margin-right:1rem;font-size:0.85rem"><input type="radio" name="r" checked> Email</label><label style="display:inline-flex;align-items:center;gap:0.25rem;font-size:0.85rem"><input type="radio" name="r"> Telepon</label></div><div><button style="background:#2563eb;color:white;border:none;padding:0.5rem 1.5rem;border-radius:6px;cursor:pointer;font-weight:600;font-size:0.85rem">Kirim Pesan</button><button type="reset" style="background:transparent;border:1px solid var(--bd);color:var(--tl);padding:0.5rem 1.5rem;border-radius:6px;cursor:pointer;font-size:0.85rem;margin-left:0.5rem">Reset</button></div></form></div></div></div><h2>6. Animasi CSS (@keyframes)</h2><div class="note"><b>@keyframes</b>: Mendefinisikan animasi multi-tahap. animation shorthand untuk menerapkan. prefers-reduced-motion untuk aksesibilitas.</div><div class="demo"><div class="demo-code">@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(0.95); }
+}
+@keyframes spin {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+
+.element {
+  animation: bounce 1s ease infinite;
+}</div><div class="demo-preview"><div class="demo-preview-inner" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;min-height:120px;align-items:center"><div style="width:50px;height:50px;background:#2563eb;border-radius:8px;animation:bounceD 1s ease infinite;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:0.7rem">Bnc</div><style>@keyframes bounceD{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}</style><div style="width:50px;height:50px;background:#7c3aed;border-radius:50%;animation:pulseD 1.5s ease infinite;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:0.7rem">Pls</div><style>@keyframes pulseD{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.7;transform:scale(0.95)}}</style><div style="width:40px;height:40px;border:4px solid #10b981;border-top-color:transparent;border-radius:50%;animation:spinD 0.8s linear infinite;display:flex;align-items:center;justify-content:center"></div><style>@keyframes spinD{from{transform:rotate(0)}to{transform:rotate(360deg)}}</style></div></div></div><h2>7. Tabel dengan Stripped Rows</h2><div class="note"><b>CSS Table</b>: border-collapse:collapse untuk border rapat. :nth-child(even) untuk stripped rows. :hover untuk highlight baris.</div><div class="demo"><div class="demo-code">&lt;table&gt;
+  &lt;caption&gt;Data&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Nama&lt;/th&gt;&lt;th&gt;Nilai&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Andi&lt;/td&gt;&lt;td&gt;90&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Budi&lt;/td&gt;&lt;td&gt;85&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+CSS:
+table { border-collapse: collapse; width: 100%; }
+tr:nth-child(even) { background: #f8fafc; }
+tr:hover { background: #dbeafe; }</div><div class="demo-preview"><div class="demo-preview-inner" style="padding:0"><table style="border-collapse:collapse;width:100%;font-size:0.85rem"><caption style="padding:0.5rem;font-weight:700;text-align:left">Data Siswa</caption><thead><tr style="background:#f1f5f9"><th style="border:1px solid #e2e8f0;padding:0.4rem 0.75rem;text-align:left">Nama</th><th style="border:1px solid #e2e8f0;padding:0.4rem 0.75rem;text-align:left">Nilai</th><th style="border:1px solid #e2e8f0;padding:0.4rem 0.75rem;text-align:left">Kelas</th></tr></thead><tbody><tr style="background:white" onmouseover="this.style.background='#dbeafe'" onmouseout="this.style.background='white'"><td style="border:1px solid #e2e8f0;padding:0.35rem 0.75rem">Andi</td><td style="border:1px solid #e2e8f0;padding:0.35rem 0.75rem">90</td><td style="border:1px solid #e2e8f0;padding:0.35rem 0.75rem">A</td></tr><tr style="background:#f8fafc" onmouseover="this.style.background='#dbeafe'" onmouseout="this.style.background='#f8fafc'"><td style="border:1px solid #e2e8f0;padding:0.35rem 0.75rem">Budi</td><td style="border:1px solid #e2e8f0;padding:0.35rem 0.75rem">85</td><td style="border:1px solid #e2e8f0;padding:0.35rem 0.75rem">A</td></tr><tr style="background:white" onmouseover="this.style.background='#dbeafe'" onmouseout="this.style.background='white'"><td style="border:1px solid #e2e8f0;padding:0.35rem 0.75rem">Cici</td><td style="border:1px solid #e2e8f0;padding:0.35rem 0.75rem">95</td><td style="border:1px solid #e2e8f0;padding:0.35rem 0.75rem">A</td></tr></tbody></table></div></div></div><h2>8. Variasi Tombol (Button Styles)</h2><div class="note"><b>Button variants</b>: Primary, Outline, Ghost, Disabled. Masing-masing hover state beda. transition untuk animasi halus.</div><div class="demo"><div class="demo-code">.btn-primary {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}</div><div class="demo-preview"><div class="demo-preview-inner" style="display:flex;gap:0.75rem;flex-wrap:wrap"><button style="background:#2563eb;color:white;border:none;padding:0.5rem 1.25rem;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s;font-size:0.85rem" onmouseover="this.style.background='#1d4ed8';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 12px rgba(37,99,235,0.4)'" onmouseout="this.style.background='#2563eb';this.style.transform='none';this.style.boxShadow='none'">Primary</button><button style="background:transparent;color:#2563eb;border:2px solid #2563eb;padding:0.5rem 1.25rem;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.3s;font-size:0.85rem" onmouseover="this.style.background='#2563eb';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='#2563eb'">Outline</button><button style="background:transparent;color:#64748b;border:none;padding:0.5rem 1.25rem;border-radius:6px;cursor:pointer;font-weight:600;transition:all 0.2s;font-size:0.85rem" onmouseover="this.style.background='#f1f5f9'" onmouseout="this.style.background='transparent'">Ghost</button><button disabled style="background:#e2e8f0;color:#94a3b8;border:none;padding:0.5rem 1.25rem;border-radius:6px;font-size:0.85rem">Disabled</button></div></div></div><h2>9. Flexbox vs Grid</h2><div class="note"><b>Flexbox</b> = 1 dimensi (baris ATAU kolom). <b>Grid</b> = 2 dimensi (baris DAN kolom). Pilih sesuai kebutuhan!</div><div class="demo"><div class="demo-code">&lt;!-- Flexbox 1D --&gt;
+&lt;div class="flex"&gt;
+  &lt;span&gt;Item 1&lt;/span&gt;
+  &lt;span&gt;Item 2&lt;/span&gt;
+  &lt;span&gt;Item 3&lt;/span&gt;
+&lt;/div&gt;
+
+CSS:
+.flex { display: flex; gap: 1rem; }
+
+&lt;!-- Grid 2D --&gt;
+&lt;div class="grid"&gt;
+  &lt;div&gt;A&lt;/div&gt;&lt;div&gt;B&lt;/div&gt;
+  &lt;div&gt;C&lt;/div&gt;&lt;div&gt;D&lt;/div&gt;
+&lt;/div&gt;
+
+CSS:
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }</div><div class="demo-preview"><div class="demo-preview-inner" style="display:flex;flex-direction:column;gap:1rem"><p style="font-size:0.85rem;margin-bottom:0"><b>Flexbox</b> (1D - horizontal):</p><div style="display:flex;gap:0.5rem"><span style="background:#dbeafe;color:#2563eb;padding:0.35rem 0.75rem;border-radius:6px;font-weight:600;font-size:0.85rem">Item 1</span><span style="background:#dbeafe;color:#2563eb;padding:0.35rem 0.75rem;border-radius:6px;font-weight:600;font-size:0.85rem">Item 2</span><span style="background:#dbeafe;color:#2563eb;padding:0.35rem 0.75rem;border-radius:6px;font-weight:600;font-size:0.85rem">Item 3</span></div><p style="font-size:0.85rem;margin-bottom:0"><b>Grid</b> (2D - baris & kolom):</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem"><div style="background:#f3e8ff;color:#7c3aed;padding:0.5rem;border-radius:6px;text-align:center;font-weight:600;font-size:0.85rem">A</div><div style="background:#f3e8ff;color:#7c3aed;padding:0.5rem;border-radius:6px;text-align:center;font-weight:600;font-size:0.85rem">B</div><div style="background:#f3e8ff;color:#7c3aed;padding:0.5rem;border-radius:6px;text-align:center;font-weight:600;font-size:0.85rem">C</div><div style="background:#f3e8ff;color:#7c3aed;padding:0.5rem;border-radius:6px;text-align:center;font-weight:600;font-size:0.85rem">D</div></div></div></div></div><h2>10. Informasi File-file Belajar</h2><div class="note"><b>Semua file siap pakai!</b> Buka di browser untuk melihat hasilnya. Setiap file sudah termasuk syntax highlighting, copy-to-clipboard, dark mode, dan live preview.</div><div class="demo" style="grid-template-columns:1fr"><div class="demo-code" style="padding:1rem">File-file yang tersedia:
+
+1. panduan_lengkap.html (379 KB)
+   - Seluruh konten dari kedua file .md
+   - Syntax highlighting + copy button
+   - Sidebar daftar isi
+   - Responsive + dark mode
+
+2. belajar_01_html_lengkap.html (52 KB)
+   - SEMUA elemen HTML + preview langsung
+   - Kode + preview + catatan
+   - Copy button setiap kode
+
+3. belajar_02_css_lengkap.html (94 KB)
+   - SEMUA properti CSS + preview langsung
+   - Selectors, Box Model, Flexbox, Grid
+   - Animation, Transition, Transform
+   - Filter, Media Queries, Variables
+
+4. belajar_03_proyek_lengkap.html
+   - Proyek lengkap menggabungkan semua
+   - Layout, Nav, Hero, Cards, Form, Table
+   - Animasi, Button, Flexbox vs Grid</div></div><footer><p>Belajar #3 Proyek Lengkap HTML + CSS 2026</p><p style="margin-top:0.25rem;font-size:0.8rem">Semua komponen dalam satu proyek lengkap dengan live preview.</p></footer></div></body></html>
